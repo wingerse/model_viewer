@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.13)
-project(meinkraft)
+project(model_loader)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(meinkraft
+add_executable(model_loader
         src/engine/gl/Cubemap.cpp
         src/engine/gl/Cubemap.h
         src/engine/gl/glad.c
@@ -28,5 +28,5 @@ add_executable(meinkraft
         src/Game.h
         src/main.cpp src/engine/gl/buffers.cpp src/engine/gl/buffers.h src/engine/gl/VAO.cpp src/engine/gl/VAO.h src/engine/gl/FrameBuffer.cpp src/engine/gl/FrameBuffer.h)
 
-target_compile_options(meinkraft PUBLIC -Werror -Wall -Wextra -Wno-unused-parameter -Wno-error=unused-function)
-target_link_libraries(meinkraft glfw dl assimp)
+target_compile_options(model_loader PUBLIC -Werror -Wall -Wextra -Wno-unused-parameter -Wno-error=unused-function)
+target_link_libraries(model_loader glfw dl assimp)

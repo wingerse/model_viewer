@@ -36,7 +36,7 @@ struct GLFW {
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
         glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GLFW_TRUE);
 
-        _window = glfwCreateWindow(WINDOW_W, WINDOW_H, "Meinkraft", nullptr, nullptr);
+        _window = glfwCreateWindow(WINDOW_W, WINDOW_H, "model_loader", nullptr, nullptr);
         glfwMakeContextCurrent(_window);
         glfwSwapInterval(1);
         if(!gladLoadGLLoader(reinterpret_cast<GLADloadproc>(glfwGetProcAddress))) {
