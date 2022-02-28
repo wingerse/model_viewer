@@ -1,5 +1,5 @@
-# Model Loader  
-Loads models with at least a mesh, diffuse and specular maps.  
+# Model Viewer  
+Loads and displays models with at least a mesh, diffuse and specular maps.  
 The material paths should be relative to the model file.  
 Requires OpenGL 4.6  
 
