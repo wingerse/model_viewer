@@ -1,5 +1,6 @@
 #include "Cubemap.h"
 #include "../stb_image.h"
+#include <stdexcept>
 
 using namespace math;
 

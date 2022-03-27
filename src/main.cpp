@@ -1,6 +1,7 @@
 #include "Game.h"
 #include "engine/stb_image.h"
 #include <iostream>
+#include <stdexcept>
 
 constexpr int WINDOW_W = 1024;
 constexpr int WINDOW_H = 800;
@@ -36,7 +37,7 @@ struct GLFW {
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
         glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GLFW_TRUE);
 
-        _window = glfwCreateWindow(WINDOW_W, WINDOW_H, "model_loader", nullptr, nullptr);
+        _window = glfwCreateWindow(WINDOW_W, WINDOW_H, "model_viewer", nullptr, nullptr);
         glfwMakeContextCurrent(_window);
         glfwSwapInterval(1);
         if(!gladLoadGLLoader(reinterpret_cast<GLADloadproc>(glfwGetProcAddress))) {
@@ -61,7 +62,7 @@ int main(int argc, char** argv)
         case 1: model_path = "assets/pudge/pudge.obj"; break;
         case 2: model_path = argv[1]; break;
         default:
-            std::cerr << "usage: model_loader [model_path]";
+            std::cerr << "usage: model_viewer [model_path]";
             return 1;
     }
 
